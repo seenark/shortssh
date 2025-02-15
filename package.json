@@ -1,0 +1,57 @@
+{
+  "name": "shortssh",
+  "version": "0.0.1",
+  "description": "",
+  "type": "module",
+  "author": {
+    "name": "Atiwat Seenark",
+    "email": "atiwat-s.19@hotmail.com"
+  },
+  "publishConfig": {
+    "access": "public",
+    "directory": "dist"
+  },
+  "homepage": "https://github.com/seenark/shortssh",
+  "bin": {
+    "shortssh": "bin/index.js"
+  },
+  "files": [
+    "dist",
+    "bin/index.js"
+  ],
+  "scripts": {
+    "lint": "eslint --fix .",
+    "dev": "unbuild --stub",
+    "build": "unbuild",
+    "typecheck": "tsc --noEmit",
+    "pub": "npm publish --access public",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "bind-link": "pnpm link shortssh .",
+    "unbind-link": "pnpm unlink shortssh .",
+    "start": "pnpm shortssh"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "devDependencies": {
+    "@antfu/eslint-config": "^4.2.1",
+    "@total-typescript/tsconfig": "^1.0.4",
+    "@types/node": "^22.13.4",
+    "eslint": "^9.20.1",
+    "eslint-plugin-perfectionist": "^4.9.0",
+    "typescript": "^5.7.3",
+    "unbuild": "^3.3.1",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^3.0.5"
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.10.0",
+    "effect": "^3.13.1",
+    "shortssh": "link:../../../../../Users/atiwatseenark/Library/pnpm/global/5/node_modules/shortssh"
+  },
+  "pnpm": {
+    "overrides": {
+      "shortssh": "link:"
+    }
+  }
+}
