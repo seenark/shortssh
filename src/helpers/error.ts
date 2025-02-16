@@ -3,5 +3,5 @@ export type ErrorMsg = {
   msg?: string
 }
 export function createErrorFactory<T>(Self: new (payload: ErrorMsg) => T) {
-  return (msg?: string) => (error?: unknown) => new Self({ error, msg })
+  return (msg?: string) => (error?: unknown) => new Self({ error: JSON.stringify(error), msg })
 }
